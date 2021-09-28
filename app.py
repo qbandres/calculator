@@ -9,8 +9,8 @@ def main():
     return render_template('app.html')
 
 #Form Submission Route
-@app.route('/send', methods = ['POST'])
-def send(sum=sum):
+@app.route('/calc', methods = ['PoST'])
+def send(valor=sum):
     if request.method == 'POST':
         num1 = request.form['num1']
         num2 = request.form['num2']
@@ -36,6 +36,7 @@ def send(sum=sum):
             return render_template('app.html',result=sum)
         else:
             return render_template('app.html')
+
 
 if __name__ == '__main__':
     app.debug = True
